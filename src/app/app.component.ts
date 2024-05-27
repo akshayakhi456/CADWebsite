@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { TopHeaderComponent } from './top-header/top-header.component';
 import { MenuHeaderComponent } from './menu-header/menu-header.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { CauroselComponent } from './caurosel/caurosel.component';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,8 @@ import { HomePageComponent } from './home-page/home-page.component';
   imports: [RouterOutlet, 
     TopHeaderComponent,
     MenuHeaderComponent,
-    HomePageComponent
+    HomePageComponent,
+    CauroselComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
