@@ -1,7 +1,7 @@
 .menu-header {
     display: flex;
     justify-content: space-between;
-    padding: 2rem ;
+    padding: 2rem 2rem .75rem;
     font-size: 14px;
     box-shadow: 0 -5px 5px -8px;
 }
@@ -12,9 +12,8 @@
     list-style: none;
 }
 .menu li:hover  {
-    color: #c82333;
+    color: rgb(237 28 36/1);
     cursor: pointer;
-    border-bottom: 2px solid #c82333;
 }
 .mega-menu-title {
     position: static;
