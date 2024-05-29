@@ -4,6 +4,7 @@ import { TopHeaderComponent } from './top-header/top-header.component';
 import { MenuHeaderComponent } from './menu-header/menu-header.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { CauroselComponent } from './caurosel/caurosel.component';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,8 @@ import { CauroselComponent } from './caurosel/caurosel.component';
     TopHeaderComponent,
     MenuHeaderComponent,
     HomePageComponent,
-    CauroselComponent
+    CauroselComponent,
+    FooterComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

@@ -1,0 +1,39 @@
+.text-14 {
+   font-size: 14px;
+   font-weight: 300;
+}
+a {
+  text-decoration: none;
+}
+.text-theme-red:hover, .text-theme-red {
+  color: rgb(237 28 36/1);
+}
+.text-theme-gray {
+    color: rgb(93 93 93/1);
+}
+.flex-20 {
+    flex: 20%;
+}
+.flex-40 {
+    flex: 35%;
+}
+.text-17 {
+    font-size: 17px;
+}
+.bg-gray-300 {
+    background: rgb(209 213 219);
+    width: 0.5px;
+}
+@media (max-width: 800px) {
+    .hidden {
+        display: none;
+    }
+    .flex-40, .flex-20 {
+        flex: 100% !important;
+        text-align: center;
+    }
+}
+
+.bg-theme-red {
+    background-color: rgb(237 28 36/1);
+}

@@ -1,0 +1,26 @@
+.leading-5 {
+    line-height: 1.25rem;
+}
+.text-theme-red {
+    color: rgb(237 28 36/1);
+}
+.bg-red{
+    background-color: rgb(255 243 232/1);
+}
+.br-1 {
+    border-radius: 5px;
+}
+.flex-33 {
+    flex: 33%;
+}
+@media  (max-width: 800px)  {
+    .flex-33 {
+        flex: 100%;
+    }
+}
+.bg-theme-gray-50 {
+    background-color: rgb(248 248 248/1);
+}
+.bg-theme-red {
+    background-color: rgb(237 28 36/1);
+}

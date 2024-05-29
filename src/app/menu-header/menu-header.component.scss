@@ -27,7 +27,12 @@
     width: 80%;
     z-index: 9999;
 }
-.mega-menu-title:hover .open-mega-menu {
+.student-corner .open-mega-menu {
+    right: unset !important;
+    width: 10%;
+}
+.mega-menu-title:hover .open-mega-menu,
+.student-corner:hover .open-mega-menu {
     display: block;
 }
 .menu-container {
