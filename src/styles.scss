@@ -1,8 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@include mat.form-field-density(-3);
+$theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$azure-palette,
+    tertiary: mat.$blue-palette,
+  )
+));
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+    @include mat.all-component-themes($theme);
+}
 
+@include mat.core();
+@include mat.color-variants-backwards-compatibility($theme);
 .text-5xl {
     font-size: 3rem !important;
     line-height: 1 !important;

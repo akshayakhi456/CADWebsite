@@ -24,7 +24,7 @@
     text-align: left;
     right: 78px;
     width: 80%;
-    z-index: 9999;
+    z-index: 9;
 }
 .student-corner .open-mega-menu {
     right: unset !important;
@@ -55,3 +55,33 @@
     background-color: rgb(237 28 36/1);
     color: #fff;
 }
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+}
+@media screen and (min-width: 768px) {
+    .menu-responsive {
+        display: none !important;
+    }
+}
+
+.menu-responsive {
+    display: block;
+}
+.right-0 {
+    right: 0;
+}
+.z-9 {
+    z-index: 9;
+}
+.w-95 {
+    width: 80%;
+}
+.menu-item {
+    text-decoration: none;
+    padding: 20px 20px;
+    color: #000;
+    border-bottom: 1px solid rgb(220 220 220);
+}
+

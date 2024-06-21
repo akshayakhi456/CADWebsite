@@ -71,3 +71,16 @@ div:last-child hr {
     margin-left: 2rem !important;
     margin-right: 2rem !important;
 }
+
+@media screen and (max-width: 768px) {
+    .top-header {
+        display: none;
+    }
+}
+
+.top-header {
+    border-radius: 10px;
+    background: gainsboro;
+    padding: 1rem;
+    margin: 0px 10px;
+}

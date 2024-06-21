@@ -1,0 +1,15 @@
+::ng-deep .mat-mdc-dialog-container {
+//   --mdc-dialog-container-color: #FFF;
+//   color: #000;
+  z-index: 999999 !important;
+}
+.example-full-width {
+    width: 100%;
+}
+.header {
+    color: red;
+    text-align: center;
+}
+.color-red {
+    color: red;
+}
