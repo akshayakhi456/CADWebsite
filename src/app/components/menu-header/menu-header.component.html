@@ -2,7 +2,7 @@
     <div class="logo">CADD CENTER</div>
     <div>
         <ul class="menu">
-            <li>About</li>
+            <li><a (click)="scrollToAbout()">About </a></li>
             <li class="mega-menu-title">
                 <span>Our Program</span>
                 <div class="py-1 open-mega-menu">
@@ -100,7 +100,7 @@
                     <div class="bg-white border rounded">
                         <nav>
                             <div class="d-flex flex-column menu-list">
-                                <a class="menu-item">About</a>
+                                <a class="menu-item" (click)="scrollToAbout();">About</a>
                                 <a class="menu-item d-flex justify-content-between" (click)="programCourseOpen = !programCourseOpen">
                                     <span>Our Programs</span>
                                     <span class="down-caret">
@@ -110,65 +110,65 @@
                                     </span>
                                 </a>
                                 @if (programCourseOpen) {
-                                    <a>
+                                    <a  (click)="programCourseOpen = !programCourseOpen; isMenuOpen = !isMenuOpen">
                                         <div class="w-100 px-3">
-                                            <div class="sub-menu-item-header">Civil CAD Training</div>
-                                            <div class="sub-menu-item-link">Autocad Course</div>
-                                            <div class="sub-menu-item-link">3DSMAX Course</div>
-                                            <div class="sub-menu-item-link">Google Sketchup Course</div>
-                                            <div class="sub-menu-item-link">Revit Architecture Course</div>
-                                            <div class="sub-menu-item-link">Navis Works Course</div>
-                                            <div class="sub-menu-item-link">Lumion Course</div>
-                                            <div class="sub-menu-item-link">Enscape Course</div>
-                                            <div class="sub-menu-item-link">Staadpro Course</div>
-                                            <div class="sub-menu-item-link">Revit Structure Course</div>
-                                            <div class="sub-menu-item-link">Etabs Course</div>
-                                            <div class="sub-menu-item-link">Quantity Survey Course</div>
-                                            <div class="sub-menu-item-link">Primavera Course</div>
-                                            <div class="sub-menu-item-link">Microsoft Project Course</div>
+                                            <div class="sub-menu-item-header"(click)="openDialog('Civil CAD')">Civil CAD Training</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Civil CAD')">Autocad Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Civil CAD')">3DSMAX Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Civil CAD')">Google Sketchup Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Civil CAD')">Revit Architecture Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Civil CAD')">Navis Works Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Civil CAD')">Lumion Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Civil CAD')">Enscape Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Civil CAD')">Staadpro Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Civil CAD')">Revit Structure Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Civil CAD')">Etabs Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Civil CAD')">Quantity Survey Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Civil CAD')">Primavera Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Civil CAD')">Microsoft Project Course</div>
                                         </div> 
                                         <div class="w-100 px-3">
-                                            <div class="sub-menu-item-header">Mechanical CAD Training</div>
-                                            <div class="sub-menu-item-link">Autocad Mechanical Course</div>
-                                            <div class="sub-menu-item-link">Catia Course</div>
-                                            <div class="sub-menu-item-link">Creo Course</div>
-                                            <div class="sub-menu-item-link">NX CAD Course</div>
-                                            <div class="sub-menu-item-link">Solidworks Course</div>
-                                            <div class="sub-menu-item-link">Ansys Course</div>
-                                            <div class="sub-menu-item-link">Hypermesh Course</div>
-                                            <div class="sub-menu-item-link">Hvac Course</div>
-                                            <div class="sub-menu-item-link">Revit Mep Course</div>
-                                            <div class="sub-menu-item-header">Electrical CAD Training</div>
-                                            <div class="sub-menu-item-link">Autocad Electrical Course</div>
-                                            <div class="sub-menu-item-link">Electrical cad Course</div>
-                                            <div class="sub-menu-item-link">E-Plan Course</div>
-                                            <div class="sub-menu-item-link">Revit Mep Course</div>
+                                            <div class="sub-menu-item-header" (click)="openDialog('Mechanical CAD')">Mechanical CAD Training</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Mechanical CAD')">Autocad Mechanical Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Mechanical CAD')">Catia Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Mechanical CAD')">Creo Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Mechanical CAD')">NX CAD Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Mechanical CAD')">Solidworks Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Mechanical CAD')">Ansys Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Mechanical CAD')">Hypermesh Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Mechanical CAD')">Hvac Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Mechanical CAD')">Revit Mep Course</div>
+                                            <div class="sub-menu-item-header" (click)="openDialog('Electrical CAD')">Electrical CAD Training</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Electrical CAD')">Autocad Electrical Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Electrical CAD')">Electrical cad Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Electrical CAD')">E-Plan Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Electrical CAD')">Revit Mep Course</div>
                                         </div> 
                                         <div class="w-100 px-3">
-                                            <div class="sub-menu-item-header">BIM Courses</div>
-                                            <div class="sub-menu-item-link">Autocad Course</div>
-                                            <div class="sub-menu-item-link">Revit Architecture Course</div>
-                                            <div class="sub-menu-item-link">Revit Structure Course</div>
-                                            <div class="sub-menu-item-link">Revit Mep Course</div>
-                                            <div class="sub-menu-item-link">Navis Works Course</div>
-                                            <div class="sub-menu-item-link">BIM Collabrate Pro</div>
-                                            <div class="sub-menu-item-link">Primavera Course</div>
-                                            <div class="sub-menu-item-header">Project Management Training</div>
-                                            <div class="sub-menu-item-link">Autocad Course</div>
-                                            <div class="sub-menu-item-link">Quantity Survey Course</div>
-                                            <div class="sub-menu-item-link">Primavera P6 Course</div>
-                                            <div class="sub-menu-item-link">Microsoft Project Course</div>
+                                            <div class="sub-menu-item-header" (click)="openDialog('BIM')">BIM Courses</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('BIM')">Autocad Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('BIM')">Revit Architecture Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('BIM')">Revit Structure Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('BIM')">Revit Mep Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('BIM')">Navis Works Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('BIM')">BIM Collabrate Pro</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('BIM')">Primavera Course</div>
+                                            <div class="sub-menu-item-header" (click)="openDialog('Project Management')">Project Management Training</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Project Management')">Autocad Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Project Management')">Quantity Survey Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Project Management')">Primavera P6 Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Project Management')">Microsoft Project Course</div>
                                         </div>
                                         <div class="w-100 px-3">
-                                            <div class="sub-menu-item-header">Architecture CAD Courses</div>
-                                            <div class="sub-menu-item-link">Autocad Course</div>
-                                            <div class="sub-menu-item-link">3DSMAX Course</div>
-                                            <div class="sub-menu-item-link">Google Sketchup Course</div>
-                                            <div class="sub-menu-item-link">Revit Architecture Course</div>
-                                            <div class="sub-menu-item-link">Vray Course</div>
-                                            <div class="sub-menu-item-link">Lumion Course</div>
-                                            <div class="sub-menu-item-link">Enscape Course</div>
-                                            <div class="sub-menu-item-link">Photoshop Course</div>
+                                            <div class="sub-menu-item-header" (click)="openDialog('Architecture CAD')">Architecture CAD Courses</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Architecture CAD')">Autocad Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Architecture CAD')">3DSMAX Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Architecture CAD')">Google Sketchup Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Architecture CAD')">Revit Architecture Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Architecture CAD')">Vray Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Architecture CAD')">Lumion Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Architecture CAD')">Enscape Course</div>
+                                            <div class="sub-menu-item-link" (click)="openDialog('Architecture CAD')">Photoshop Course</div>
                                         </div> 
                                     </a>
                                 }

@@ -11,29 +11,39 @@
             </div>
         }
         <div class="form-floating mb-1">
-            <input type="email" formControlName="email" class="form-control" id="floatingPassword" placeholder="Email">
+            <input formControlName="email" class="form-control" id="floatingPassword" placeholder="Email">
             <label for="floatingPassword">Email</label>
         </div>
-        @if (f.email.errors && f.email.touched) {
+        @if (f.email.hasError('required') && f.email.touched) {
             <div class="mb-3 color-red">
                 Email is Required
+            </div>
+        }
+        @else if (f.email.hasError('pattern') && f.mobileNumber.touched) {
+            <div class="mb-3 color-red">
+                Please enter valid Email Address
             </div>
         }
         <div class="form-floating mb-1">
             <input type="number" formControlName="mobileNumber" class="form-control" id="floatingMobile" placeholder="MobileNumber">
             <label for="floatingMobile">Mobile Number</label>
         </div>
-        @if (f.mobileNumber.errors && f.mobileNumber.touched) {
+        @if (f.mobileNumber.hasError('required') && f.mobileNumber.touched) {
             <div class="mb-3 color-red">
                 Mobile Number is Required
+            </div>
+        }
+        @else if (f.mobileNumber.hasError('pattern') && f.mobileNumber.touched) {
+            <div class="mb-3 color-red">
+                Mobile Number must be 10 digits
             </div>
         }
         <div class="form-floating mb-1">
             <select class="form-select" formControlName="course" id="floatingSelect" aria-label="Floating label select example">
               <option selected>Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              @for(item of courses; track item) {
+                <option [value]="item">{{item}}</option>
+              }
             </select>
             <label for="floatingSelect">Courses</label>
         </div>

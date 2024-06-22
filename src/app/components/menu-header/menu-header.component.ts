@@ -24,4 +24,9 @@ export class MenuHeaderComponent {
       panelClass: 'bg-color'
     })
   }
+
+  scrollToAbout(): void {
+    const html = document.querySelector('.cadd-body');
+    html?.scrollIntoView({behavior:'smooth'});
+  }
 }

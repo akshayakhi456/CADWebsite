@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
-import { IMAGE_CONFIG, ImageLoaderConfig, NgOptimizedImage } from '@angular/common';
+import {NgOptimizedImage } from '@angular/common';
 import { ImagesService } from '../../../services/images.service';
+import { environment } from '../../../../environment/environments';
 
 @Component({
   selector: 'app-caurosel',
@@ -13,6 +14,7 @@ import { ImagesService } from '../../../services/images.service';
 export class CauroselComponent {
   service = inject(ImagesService);
   data: any = [];
+  domain = environment.apiUrl
   constructor() {}
 
   ngAfterViewInit(): void {
@@ -22,19 +24,16 @@ export class CauroselComponent {
   getBanner(): void {
     this.service.getAllBanners().subscribe({
       next: async (result) => {
-        if (result.result) {
-          this.data = [];
-          for (const blob of result.result) {
-            try {
-              const base64String = blob.data ? this.base64ArrayBuffer(blob.data.data) : null;
-              this.data.push({
-                image: `data:image/png;base64,${base64String as string}`,
-                id: blob.id
-              });
-            } catch (error) {
-              console.error("Error converting Blob to Base64:", error);
+        if(result.result?.length) {
+          let time = 2000 * result.result.length;
+          this.data = result.result.map((r: any) => {
+            time -= 2000;
+            return {
+              image: `${this.domain}/images/${r.name}`,
+              id: r.id,
+              time
             }
-          }
+          })
         }
       }
     })

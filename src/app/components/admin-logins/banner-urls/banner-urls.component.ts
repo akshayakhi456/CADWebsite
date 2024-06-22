@@ -4,6 +4,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { ImagesService } from '../../../services/images.service';
 import { MatDialog, MatDialogActions, MatDialogClose, MatDialogContent, MatDialogTitle } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { environment } from '../../../../environment/environments';
 
 @Component({
   selector: 'app-banner-urls',
@@ -25,6 +26,8 @@ export class BannerUrlsComponent {
   imgViewer = '';
   service = inject(ImagesService);
   data: any = [];
+  uploadFile: any;
+  domain = environment.apiUrl;
 
   ngAfterViewInit(): void {
     this.getBanner();
@@ -36,6 +39,7 @@ export class BannerUrlsComponent {
     fileSelected = fileSelected.files;
     if (fileSelected.length > 0) {
       const fileToLoad = fileSelected[0];
+      this.uploadFile = fileSelected[0];
       let fileReader = new FileReader();
       fileReader.onload = function (fileLoadedEventTrigger) {
         let textAreaFileContents: any;
@@ -69,7 +73,7 @@ export class BannerUrlsComponent {
 
   saveBanner(base64: any): void {
     const formdata = new FormData();
-    formdata.append('file', base64);
+    formdata.append('file', this.uploadFile);
 
     this.service.addBanner(formdata).subscribe({
       next: () =>{
@@ -89,19 +93,25 @@ export class BannerUrlsComponent {
   getBanner(): void {
     this.service.getAllBanners().subscribe({
       next: async (result) => {
+        this.data = [];
         if (result.result) {
-          this.data = [];
-          for (const blob of result.result) {
-            try {
-              const base64String = blob.data ? this.base64ArrayBuffer(blob.data.data) : null;
-              this.data.push({
-                image: `data:image/png;base64,${base64String as string}`,
-                id: blob.id
-              });
-            } catch (error) {
-              console.error("Error converting Blob to Base64:", error);
+          this.data = result.result.map((r: any) => {
+            return {
+              image: `${this.domain}/images/${r.name}`,
+              id: r.id
             }
-          }
+          });
+          // for (const blob of result.result) {
+          //   try {
+          //     const base64String = blob.data ? this.base64ArrayBuffer(blob.data.data) : null;
+          //     this.data.push({
+          //       image: `data:image/png;base64,${base64String as string}`,
+          //       id: blob.id
+          //     });
+          //   } catch (error) {
+          //     console.error("Error converting Blob to Base64:", error);
+          //   }
+          // }
         }
       }
     })

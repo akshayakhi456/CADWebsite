@@ -10,7 +10,7 @@ export class ImagesService {
     apiUrl = environment.apiUrl;
     readonly addEnquiry = this.apiUrl+'/candidate/addCandidateInfo';
     readonly getEnquiry = this.apiUrl+'/candidate/getCandidates';
-    readonly addImage = this.apiUrl+'/banner/add';
+    readonly addImage = this.apiUrl+'/banner/upload';
     readonly getAllImage = this.apiUrl+'/banner/get';
     readonly deleteImage = this.apiUrl+'/banner/delete/';
 
@@ -29,7 +29,8 @@ export class ImagesService {
     }
 
     addBanner(payload: FormData): Observable<any> {
-        return this.http.post(this.addImage,payload);
+        const options = {} as any;
+        return this.http.post(this.addImage,payload, options);
     }
 
     getAllBanners(): Observable<any> {
