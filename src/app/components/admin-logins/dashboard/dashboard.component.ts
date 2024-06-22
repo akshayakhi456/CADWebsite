@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { BannerUrlsComponent } from '../banner-urls/banner-urls.component';
 import { CandidateListComponent } from '../candidate-list/candidate-list.component';
+import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,5 +11,9 @@ import { CandidateListComponent } from '../candidate-list/candidate-list.compone
   styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent {
+service = inject(AuthService);
 
+signout() {
+  this.service.logout();
+}
 }

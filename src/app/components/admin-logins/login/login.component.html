@@ -1,1 +1,24 @@
-<p>login works!</p>
+<div class="login-form">
+    <h4>Login</h4>
+    <form [formGroup]="loginForm">
+        <div class="form-floating mb-2">
+            <input type="text" formControlName="username" class="form-control" id="floatingInput" placeholder="Name">
+            <label for="floatingInput">Username</label>
+        </div>
+        @if (f.username.errors && f.username.touched) {
+            <div class="mb-3 text-red">
+                Name is Required
+            </div>
+        }
+        <div class="form-floating mb-2">
+            <input type="password" formControlName="password" class="form-control" id="floatingInput" placeholder="Name">
+            <label for="floatingInput">password</label>
+        </div>
+        @if (f.password.errors && f.password.touched) {
+            <div class="mb-3 text-red">
+                Password is Required
+            </div>
+        }
+    </form>
+    <button class="btn btn-secondary " (click)="loginFormSubmit()">Login</button>
+</div>

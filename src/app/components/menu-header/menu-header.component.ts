@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { EnquiryModalComponent } from '../enquiry-modal/enquiry-modal.component';
+import { environment } from '../../../environment/environments';
 
 @Component({
   selector: 'app-menu-header',
@@ -14,6 +15,7 @@ export class MenuHeaderComponent {
   isMenuOpen = false;
   programCourseOpen = false;
   studentCornerOpen = false;
+  domain = environment.apiUrl;
 
   openDialog(course: string): void {
     this.openModal.open(EnquiryModalComponent, {

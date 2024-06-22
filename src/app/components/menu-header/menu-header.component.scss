@@ -1,7 +1,7 @@
 .menu-header {
     display: flex;
     justify-content: space-between;
-    padding: 2rem 2rem .75rem;
+    padding: .75rem 2rem .75rem;
     font-size: 14px;
     box-shadow: 0 -5px 5px -8px;
 }
@@ -10,6 +10,7 @@
     flex-direction: row;
     gap: 25px;
     list-style: none;
+    margin-bottom: 0 !important;
 }
 .menu li:hover  {
     color: rgb(237 28 36/1);
