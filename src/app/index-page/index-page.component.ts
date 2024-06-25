@@ -4,6 +4,7 @@ import { FooterComponent } from '../footer/footer.component';
 import { HomePageComponent } from '../components/home-page/home-page.component';
 import { MenuHeaderComponent } from '../components/menu-header/menu-header.component';
 import { TopHeaderComponent } from '../components/top-header/top-header.component';
+import { environment } from '../../environment/environments';
 
 @Component({
   selector: 'app-index-page',
@@ -18,5 +19,5 @@ import { TopHeaderComponent } from '../components/top-header/top-header.componen
   styleUrl: './index-page.component.scss'
 })
 export class IndexPageComponent {
-
+  domain = environment.apiUrl
 }
