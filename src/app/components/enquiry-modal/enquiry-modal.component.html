@@ -40,7 +40,6 @@
         }
         <div class="form-floating mb-1">
             <select class="form-select" formControlName="course" id="floatingSelect" aria-label="Floating label select example">
-              <option selected>Open this select menu</option>
               @for(item of courses; track item) {
                 <option [value]="item">{{item}}</option>
               }

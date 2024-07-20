@@ -11,6 +11,10 @@ a {
 .text-theme-gray {
     color: rgb(93 93 93/1);
 }
+
+.text-theme-black {
+    color: #000;
+}
 .flex-20 {
     flex: 20%;
 }
@@ -36,4 +40,20 @@ a {
 
 .bg-theme-red {
     background-color: rgb(237 28 36/1);
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.opacity-0 {
+    opacity: 0;
+}
+
+.hover:opacity-1:hover {
+    opacity: 1;
 }

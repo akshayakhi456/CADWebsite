@@ -12,6 +12,9 @@
     background-color: #ff3860; /* Assuming theme-red color */
     color: #fff; /* White text */
 }
+.btn.btn-outline-success:hover {
+    background-color: #198754;
+}
 .d-inline-flex > * {
     width: 1.5rem; /* Adjust as needed */
 }

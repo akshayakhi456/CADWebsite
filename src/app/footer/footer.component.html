@@ -1,117 +1,153 @@
 <div class="pt-5  border-t-4 border-theme-red bg-white">
     <div class="d-flex flex-wrap" id="footer1">
-        <div class="d-flex flex-column text-theme-gray flex-20 ps-5">
+        <div class="d-flex flex-column text-theme-black flex-20 ps-5">
             <div class="text-17 font-normal text-theme-red font-medium pt-2 mb-3">Headquarters
             </div>
-            <p class="mb-5 address-foot-pg text-theme-gray text-14 pt-2">#6-3-788/19/B,2nd floor,Above Jockey Showroom
-            ,<br>Piller no: A-1080 Ameerpet, Hyderabad
-            <br>Telangana - 500016, India.</p>
+            <p class="address-foot-pg text-theme-black text-14 pt-2">#6-3-788/19/B,2nd floor,Above Jockey Showroom
+                ,<br>Piller no: A-1080 Ameerpet, Hyderabad
+                <br>Telangana - 500016, India.
+            </p>
+            <div class="d-flex gap-3 pb-3 ms-3">
+                <a href="https://www.facebook.com/caddcentre" target="_blank">
+                    <div class="relative">
+                        <img alt="icon" loading="lazy" width="20" height="20" decoding="async"
+                            data-nimg="1" class="w-8 h-8" src="{{domain}}/images/social/fb_icon.svg"
+                            style="color: transparent;">
+                        <img alt="icon" loading="lazy" width="20" height="20"
+                            decoding="async" data-nimg="1" class="absolute top-0 opacity-0 hover:opacity-1"
+                            src="{{domain}}/images/social/fb_hover.svg" style="color: transparent;">
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/cadd__centre/" target="_blank">
+                    <div class="relative">
+                        <img alt="icon" loading="lazy" width="20" height="20" decoding="async"
+                            data-nimg="1" class="w-8 h-8" src="{{domain}}/images/social/ig_icon.svg"
+                            style="color: transparent;">
+                        <img alt="icon" loading="lazy" width="20" height="20"
+                            decoding="async" data-nimg="1" class="absolute top-0 opacity-0 hover:opacity-1"
+                            src="{{domain}}/images/social/ig_hover.svg" style="color: transparent;">
+                    </div>
+                </a>
+                <a href="https://twitter.com/caddcentre/" target="_blank">
+                    <div class="relative">
+                        <img alt="icon" loading="lazy" width="20" height="20" decoding="async"
+                            data-nimg="1" class="w-8 h-8" src="{{domain}}/images/social/tw_icon.svg"
+                            style="color: transparent;">
+                        <img alt="icon" loading="lazy" width="20" height="20"
+                            decoding="async" data-nimg="1" class="absolute top-0 opacity-0 hover:opacity-1"
+                            src="{{domain}}/images/social/tw_hover.svg" style="color: transparent;">
+                    </div>
+                </a>
+                <a href="http://www.linkedin.com/company/cadd-centre/" target="_blank">
+                    <div class="relative">
+                        <img alt="icon" loading="lazy" width="20" height="20" decoding="async"
+                            data-nimg="1" class="w-8 h-8" src="{{domain}}/images/social/li_icon.svg"
+                            style="color: transparent;">
+                        <img alt="icon" loading="lazy" width="20" height="20"
+                            decoding="async" data-nimg="1" class="absolute top-0 opacity-0 hover:opacity-1"
+                            src="{{domain}}/images/social/li_hover.svg" style="color: transparent;">
+                    </div>
+                </a>
+                <a href="https://www.youtube.com/c/CADDCentreTrainingServices" target="_blank">
+                    <div class="relative"><img alt="icon" loading="lazy" width="20" height="20" decoding="async"
+                            data-nimg="1" class="w-8 h-8" src="{{domain}}/images/social/yt_icon.svg"
+                            style="color: transparent;"><img alt="icon" loading="lazy" width="20" height="20"
+                            decoding="async" data-nimg="1" class="absolute top-0 opacity-0 hover:opacity-1"
+                            src="{{domain}}/images/social/yt_hover.svg" style="color: transparent;"></div>
+                </a>
+            </div>
             <div class="flex my-10 md:space-x-8 space-x-4">
-                <img alt="CADD Centre" loading="lazy" width="100" height="40" decoding="async" data-nimg="1"
-                    style="color:transparent" src="/assets/images/cadd_centre_logo.svg">
+                <img alt="CADD Centre" loading="lazy" width="200" height="40" decoding="async" data-nimg="1"
+                    style="color:transparent" src="{{domain}}/images/cadd_centre_logo.svg">
             </div>
         </div>
         <div class="w-5 h-48 mt-2 mr-10 bg-gray-300 hidden"></div>
-        <div class="d-flex flex-column text-theme-gray flex-20 ps-5">
+        <div class="d-flex flex-column text-theme-black flex-20 ps-5">
             <div class="text-17 font-normal text-theme-red font-medium pt-2 mb-3">Company</div>
-            <a href="/aboutus/" class="text-theme-red text-theme-gray text-14">About Us</a>
-            <a href="/job-fair/" class="text-theme-red text-theme-gray text-14">Job Fair</a>
-            <a href="/news-room/" class="text-theme-red text-theme-gray text-14">Newsroom</a>
-            <a href="/blog/" class="text-theme-red text-theme-gray text-14" target="_blank">Blog</a>
-            <a href="https://newsletter.caddcentre.com/" class="text-theme-red text-theme-gray text-14"
-                target="_blank">Newsletter</a>
-            <a href="/contactus/" class="text-theme-red text-theme-gray text-14" target="_blank">Contact Us</a>
+            <a (click)="scrollToAbout()" class="text-theme-red text-theme-black text-14 pointer">About Us</a>
+            <a class="text-theme-red text-theme-black text-14 pointer">Job Fair</a>
+            <a class="text-theme-red text-theme-black text-14 pointer">Newsroom</a>
+            <a class="text-theme-red text-theme-black text-14 pointer">Blog</a>
+            <a class="text-theme-red text-theme-black text-14 pointer">Newsletter</a>
+            <a class="text-theme-red text-theme-black text-14 pointer">Contact Us</a>
         </div>
         <div class="w-5 h-48 mt-2 mr-10 bg-gray-300 hidden"></div>
-        <div class="d-flex flex-column text-theme-gray flex-20 ps-5">
+        <div class="d-flex flex-column text-theme-black flex-20 ps-5">
             <div class="text-17 font-normal text-theme-red font-medium pt-2 mb-3">Top Stream</div>
-            <a href="/stream/mechanical/" class="text-theme-red text-theme-gray text-14" target="_blank">Mechanical
+            <a (click)="openDialog('Mechanical CAD')" class="text-theme-red text-theme-black text-14 pointer">Mechanical
                 CADD</a>
-            <a href="/stream/civil-cadd/" class="text-theme-red text-theme-gray text-14">Civil CADD</a>
-            <a href="/stream/architecture/" class="text-theme-red text-theme-gray text-14">Architectural CADD</a>
-            <a href="/stream/electrical/" class="text-theme-red text-theme-gray text-14">Electrical
+            <a (click)="openDialog('Civil CAD')" class="text-theme-red text-theme-black text-14 pointer">Civil CADD</a>
+            <a (click)="openDialog('Architecture CAD')"
+                class="text-theme-red text-theme-black text-14 pointer">Architectural CADD</a>
+            <a (click)="openDialog('Electrical CAD')" class="text-theme-red text-theme-black text-14 pointer">Electrical
                 CADD</a>
-            <a href="/stream/bim/" class="text-theme-red text-theme-gray text-14">Building Information Modeling</a>
-          
+            <a (click)="openDialog('BIM')" class="text-theme-red text-theme-black text-14 pointer">Building Information
+                Modeling</a>
+
         </div>
-        <!-- <div class="w-5 h-48 mt-2 mr-10 bg-gray-300 hidden"></div>
-        <div class="d-flex flex-column text-theme-gray flex-20 ps-5">
-            <div class="text-17 font-normal text-theme-red font-medium pt-2 mb-3">Certifications</div>
-            <a href="/course-level/proficient-courses/" class="text-theme-red text-theme-gray text-14">Proficient
-                Certificate</a>
-            <a href="/course-level/master-courses/" class="text-theme-red text-theme-gray text-14">Masters
-                Certificate</a>
-            <a href="/course-level/expert-courses/" class="text-theme-red text-theme-gray text-14">Expert
-                Certificate</a>
-        </div> -->
     </div>
     <div class="bg-gray-300 lg:p-[1.5px] mb-8"></div>
     <div class="d-flex flex-wrap mt-5" id="footer1">
         <div class="w-5 h-48 mt-2 mr-10 bg-gray-300 hidden"></div>
 
-        <div class="d-flex flex-column text-theme-gray flex-20 ps-5">
+        <div class="d-flex flex-column text-theme-black flex-20 ps-5">
             <div class="text-17 font-normal text-theme-red font-medium pt-2 mb-3">Mechanical</div>
-            <a href="/courses/autocad-mechanical-software-certification-course/"
-                class="text-theme-red text-theme-gray text-14">AutoCAD Mechanical</a>
-            <a href="/courses/ansys-software-certification-and-training-course/"
-                class="text-theme-red text-theme-gray text-14">ANSYS</a>
-            <a href="/courses/creo-parametric-certification-and-training-course/"
-                class="text-theme-red text-theme-gray text-14">CREO</a>
-            <a href="/courses/nx-cad-software-certification-and-training-course/"
-                class="text-theme-red text-theme-gray text-14">NX CAD</a>
-            <a href="/courses/revit-mep-certification-and-training-course/"
-                class="text-theme-red text-theme-gray text-14">Revit MEP</a>
-            <a href="/courses/solidworks-software-certification-and-training-course/"
-                class="text-theme-red text-theme-gray text-14">SolidWorks</a>
+            <a (click)="openDialog('Mechanical CAD')" class="text-theme-red text-theme-black text-14 pointer">AutoCAD
+                Mechanical</a>
+            <a (click)="openDialog('Mechanical CAD')" class="text-theme-red text-theme-black text-14 pointer">ANSYS</a>
+            <a (click)="openDialog('Mechanical CAD')" class="text-theme-red text-theme-black text-14 pointer">CREO</a>
+            <a (click)="openDialog('Mechanical CAD')" class="text-theme-red text-theme-black text-14 pointer">NX CAD</a>
+            <a (click)="openDialog('Mechanical CAD')" class="text-theme-red text-theme-black text-14 pointer">Revit
+                MEP</a>
+            <a (click)="openDialog('Mechanical CAD')"
+                class="text-theme-red text-theme-black text-14 pointer">SolidWorks</a>
         </div>
 
         <div class="w-5 h-48 mt-2 mr-10 bg-gray-300 hidden"></div>
 
-        <div class="d-flex flex-column text-theme-gray flex-20 ps-5">
+        <div class="d-flex flex-column text-theme-black flex-20 ps-5">
             <div class="text-17 font-normal text-theme-red font-medium pt-2 mb-3">Architecture,
                 Engineering &amp; Construction</div>
-            <a href="/courses/autocad-electrical-software-certification-course/"
-                class="text-theme-red text-theme-gray text-14">AutoCAD Electrical</a>
-            <a href="/courses/autocad-for-civil-architects-certification-course/"
-                class="text-theme-red text-theme-gray text-14">AutoCAD Civil</a>
-            <a href="/courses/max-for-engineers-software-certification-and-training-course/"
-                class="text-theme-red text-theme-gray text-14">3Ds Max (Max for Engineers)</a>
-            <a href="/courses/staad-pro-certification-and-training-course/"
-                class="text-theme-red text-theme-gray text-14">STAAD Pro</a><a
-                href="/courses/5d-bim-software-certification-and-training-course/"
-                class="text-theme-red text-theme-gray text-14">5D BIM</a><a href="/courses/5d-bim-using-navisworks/"
-                class="text-theme-red text-theme-gray text-14">5D BIM Using Navisworks</a><a
-                href="/courses/revit-architecture-certification-and-training-course/"
-                class="text-theme-red text-theme-gray text-14">Revit Architecture</a><a
-                href="/courses/sketchup-software-certification-and-training-course/"
-                class="text-theme-red text-theme-gray text-14">SketchUp</a><a
-                href="/courses/v-ray-certification-and-training-course/"
-                class="text-theme-red text-theme-gray text-14">V-Ray</a>
+            <a (click)="openDialog('Architecture CAD')" class="text-theme-red text-theme-black text-14 pointer">AutoCAD
+                Electrical</a>
+            <a (click)="openDialog('Architecture CAD')" class="text-theme-red text-theme-black text-14 pointer">AutoCAD
+                Civil</a>
+            <a (click)="openDialog('Architecture CAD')" class="text-theme-red text-theme-black text-14 pointer">3Ds Max
+                (Max for Engineers)</a>
+            <a (click)="openDialog('Architecture CAD')" class="text-theme-red text-theme-black text-14 pointer">STAAD
+                Pro</a>
+            <a (click)="openDialog('Architecture CAD')" class="text-theme-red text-theme-black text-14 pointer">5D
+                BIM</a>
+            <a (click)="openDialog('Architecture CAD')" class="text-theme-red text-theme-black text-14 pointer">5D BIM
+                Using Navisworks</a>
+            <a (click)="openDialog('Architecture CAD')" class="text-theme-red text-theme-black text-14 pointer">Revit
+                Architecture</a>
+            <a (click)="openDialog('Architecture CAD')"
+                class="text-theme-red text-theme-black text-14 pointer">SketchUp</a>
+            <a (click)="openDialog('Architecture CAD')"
+                class="text-theme-red text-theme-black text-14 pointer">V-Ray</a>
         </div>
 
         <div class="w-5 h-48 mt-2 mr-10 bg-gray-300 hidden"></div>
 
-        <div class="d-flex flex-column text-theme-gray flex-20 ps-5">
-            <div class="text-17 font-normal text-theme-red font-medium pt-2 mb-3">Hybrid</div><a
-                href="/courses/autocad-3d-certification-and-training-course/"
-                class="text-theme-red text-theme-gray text-14">AutoCAD 3D</a><a
-                href="/courses/3d-printing-certification-and-training-course/"
-                class="text-theme-red text-theme-gray text-14">3D Prinintg</a><a
-                href="/courses/ansys-fluent-software-certification-and-training-course/"
-                class="text-theme-red text-theme-gray text-14">ANSYS Fluent</a><a
-                href="/courses/autodesk-inventor-certification-and-training-course/"
-                class="text-theme-red text-theme-gray text-14">Autodesk Inventor</a><a href="/courses/ansys-workbench/"
-                class="text-theme-red text-theme-gray text-14">Ansys Workbench</a><a href="/courses/gdandt/"
-                class="text-theme-red text-theme-gray text-14">GD&amp;T</a><a
-                href="/courses/nx-cam-certification-and-training-course/"
-                class="text-theme-red text-theme-gray text-14">NX CAM</a><a
-                href="/courses/nx-nastran-software-certification-and-training-course/"
-                class="text-theme-red text-theme-gray text-14">NX Nastran</a>
+        <div class="d-flex flex-column text-theme-black flex-20 ps-5">
+            <div class="text-17 font-normal text-theme-red font-medium pt-2 mb-3">Hybrid</div>
+            <a (click)="openDialog('Civil CAD')" class="text-theme-red text-theme-black text-14 pointer">AutoCAD 3D</a>
+            <a (click)="openDialog('Civil CAD')" class="text-theme-red text-theme-black text-14 pointer">3D Prinintg</a>
+            <a (click)="openDialog('Civil CAD')" class="text-theme-red text-theme-black text-14 pointer">ANSYS
+                Fluent</a>
+            <a (click)="openDialog('Civil CAD')" class="text-theme-red text-theme-black text-14 pointer">Autodesk
+                Inventor</a>
+            <a (click)="openDialog('Civil CAD')" class="text-theme-red text-theme-black text-14 pointer">Ansys
+                Workbench</a>
+            <a (click)="openDialog('Civil CAD')" class="text-theme-red text-theme-black text-14 pointer">GD&amp;T</a>
+            <a (click)="openDialog('Civil CAD')" class="text-theme-red text-theme-black text-14 pointer">NX CAM</a>
+            <a (click)="openDialog('Civil CAD')" class="text-theme-red text-theme-black text-14 pointer">NX Nastran</a>
         </div>
 
     </div>
     <div class="bg-gray-300 lg:p-[1.5px] mb-8"></div>
-    <div class="bg-theme-red text-white text-center md:text-left py-3">        
-            <p class="false">© CADD Centre <!-- -->2024<!-- -->, All rights reserved</p>
+    <div class="bg-theme-red text-white text-center md:text-left py-3">
+        <p class="false">© CADD Centre <!-- -->{{currYear}}<!-- -->, All rights reserved</p>
     </div>
 </div>
